@@ -16,7 +16,7 @@
 #barreMenu{
     display: flex;
     align-items: center;
-    background-color: #356BB3;
+    background-color: #08243A;
     gap: 30px;
     padding: 15px 10px;
     box-shadow: 0 0 4px #101923;
@@ -189,7 +189,7 @@
 
 
 .flashInfo{
-    background-color: #356BB3;
+    background-color: #C69C6C;
     color: white;
     display: flex;
     overflow: hidden;
@@ -260,7 +260,8 @@
 .tiaha{
 
     font-size: 50px;
-    color: bisque;
+    color: #C69C6C;
+    filter: drop-shadow(0 0 2px #08243A);
     
 }
 
@@ -296,9 +297,9 @@
     font-style: italic;
     font-size: 1.2em;
     margin-bottom: 20px;
-    background-color: bisque;
+    background-color: #C69C6C;
     border-radius: 25px;
-    color: black;
+    color: white;
     padding: 5px;
     font-weight: 700;
 

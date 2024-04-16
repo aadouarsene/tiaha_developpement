@@ -173,13 +173,13 @@ main{
 
 /*Paramètres du menu flash Info*/
 .flashInfo{
+    background-color: #C69C6C;
     color: white;
     display: flex;
     overflow: hidden;
     position: sticky;
     top: 79px;
     z-index: 50;
-    background-color: #C69C6C;
 
 
 }
@@ -222,7 +222,7 @@ main{
 /*Paramètres du contenu de la page Notre histoire */
 
 .imageStructure{
-    background: url("images/eb1.jpg");
+    background: url("images/adioukrou.jpeg");
     background-size: cover;
     background-position-y: center;
     height: 50vh;
@@ -314,19 +314,155 @@ main{
     line-height: 1.7em;
 }
 
-.zonePresentation .carteTiaha img{
-    width: 40vw;
+
+.dabou {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+
+.dabou h2{
+    color: #007bc4;
+}
+
+.daboucontenu{
+   
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: white;
     border-radius: 10px;
-    cursor: pointer;
-    display: block;
+}
+
+.imageebebu1, .imageebebu2{
+    margin-top: 10px;
+}
+
+.imageebebu1{
+    text-align: center;
+    box-shadow: 0 0 4px black;
+    display: inline-block;
+    width: 380px;
     margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 33%;
 }
 
-.zonePresentation .carteTiaha img:hover{
-    transform: scale(2);
-    transition: all 1s ease-in-out;
+.imageebebu1:hover{
+    transform: scale(1.05);
+}
+.imageebebu1 > em{
+    font-size: 14px;
+    line-height: normal;
 }
 
+
+
+.imageebebu1 > img{
+    width : 350px;
+
+}
+
+.imageebebu2 > img{
+    float: left;
+    border-radius: 10px;
+    margin: 10px 15px 10px 0;
+    width: 250px;
+}
+
+.soustitreebeu{
+    clear: both;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.soustitreebeu2{
+    clear: both;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.presentation p{
+    text-indent: 2.5em;
+}
+
+.presentation ol, .presentation ul{
+    margin: 2px 0 0 50px ;
+}
+
+.presentation ol li, .presentation ul li{
+    line-height: 2em;
+}
+
+
+
+
+
+
+
+
+
+.apropos{
+    margin: 50px 0 30px 0;
+    text-align: center;
+    color: #888;
+    font-size: 2em;
+}
+
+.apropos span {
+    color: #08243A;
+}
+
+
+
+
+.evenementielsCulturels{
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 10px;
+    padding: 30px;
+    line-height: normal;
+}
+
+.evenementielsCulturels img{
+    width: 200px;
+    line-height: normal;
+}
+
+.fete{
+    box-shadow: 0 0 2px #ccc;
+    margin: 0 20px;
+    overflow: hidden;
+    text-align: center;
+    padding: 3px;
+    line-height: normal;
+}
+
+.fete p span{
+    font-size: 0.7rem;
+    font-weight: 300;
+    line-height: normal;
+}
+
+
+
+
+.evenementielsCulturels .fete .texte{
+    color: white;
+    height: 50px;
+    padding: 5px;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    line-height: normal;
+    background-color: #08243A;
+}
 
 
 

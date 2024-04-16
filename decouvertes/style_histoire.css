@@ -24,7 +24,7 @@ header{
 #barreMenu{
     display: flex;
     align-items: center;
-    background-color: #356BB3;
+    background-color: #08243A;
     gap: 30px;
     padding: 15px 10px;
     box-shadow: 0 0 4px #101923;
@@ -182,6 +182,7 @@ main{
     position: sticky;
     top: 79px;
     z-index: 50;
+    background-color:#C69C6C;
 
 
 }
@@ -204,6 +205,8 @@ main{
     animation: flashinfo 60s infinite linear;
     padding: 5px; 
     width: 85vw;
+    color: black;
+    
 }
 
 .information p{
