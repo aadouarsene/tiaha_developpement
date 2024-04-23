@@ -12,63 +12,21 @@
     --gris: #888;
 }
 
-header{
-    width: 100vw;
-    z-index: 99;
-    position: sticky;
-    top: 0;
-    overflow: hidden;
-
-}
-
-.flashInfo{
-    background-color: #C69C6C;
-    color: white;
-    display: flex;
-    overflow: hidden;
-}
-
-.flashTitre{
-    background-color: red;
-    display: inline-block;
-
-    text-align: center;
-    align-content: center;
-    font-weight: 800;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.information{
-    align-content: center;
-    padding-left: 5px;
-    animation: flashinfo 60s infinite linear;
-    padding: 5px;
-}
-
-@keyframes flashinfo{
-    0%{
-        transform: translate3d(100%,0,0);
-    }
-
-    100%{
-        transform: translate3d(-100%,0,0);
-    }
-}
 
 #barreMenu{
     display: flex;
     align-items: center;
     background-color: #08243A;
-    gap: 5px;
-    padding: 2px 10px;
+    gap: 30px;
+    padding: 15px 10px;
     box-shadow: 0 0 4px #101923;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
 }
 
 .logo_tiaha{
-    width: 5vw;
+
 }
 
 .logo_tiaha img{
@@ -77,16 +35,14 @@ header{
 }
 
 .menu{
-    width: 65vw;
-    flex-wrap: nowrap;
+    width: 50vw;
+    margin-left: 100px;
 }
 
 .lienNavigation{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     list-style: none;
-    flex-wrap: nowrap;
-    width: 65vw;
 }
 
 .lienNavigation > li > a{
@@ -94,6 +50,7 @@ header{
     margin: 0 10px;
     padding: 6px 20px;
     font-size: 1rem;
+    width: max-content;
 }
 
 .lienNavigation a:link{
@@ -174,12 +131,12 @@ header{
     color: black;
 }
 
+
+
 .reseauSocio{
-    width: 10vw;
+    margin-left: 50px;
+    width: 200px;
     text-align: center;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
 }
 
 .reseauSocio img{
@@ -196,7 +153,6 @@ header{
 .search{
     display: flex;
     align-items: center;
-    margin-right: 2vw;
 }
 
 .iconeSearch{
@@ -218,8 +174,7 @@ header{
 
 .container{
     position: relative;
-    top: 0;
-    width: 100vw;
+    top: 85px;
 }
 
 .audio{
@@ -228,73 +183,134 @@ header{
 }
 
 .audio audio{
-    width: 100vw;
+    width: 95vw;
     height: 25px;
 }
 
-.imageAccueil{
-    width: 100vw;
-    background-color: #08243A;
-    height: 50vh;
-    position: relative;
-}
 
-.imageAccueil img{
-    height: 50vh;
-    width: 100vw;
-    object-fit: cover;
-}
-
-.imagePrincipale{
-    position: absolute;
+.flashInfo{
+    background-color: #C69C6C;
+    color: white;
     display: flex;
-    top: 60px;
-
-}
-
-.chef{
-    z-index: 2;
-    text-align: center;
-    margin: auto;
-    width: 30vw;
-    height: 40vh;
-
     overflow: hidden;
 }
 
-.chef img{
-/*     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); */
-    height: 50vh;
+
+
+.flashTitre{
+    background-color: red;
+    display: inline-block;
+    width: 12vw;
+    text-align: center;
+    align-content: center;
+    font-weight: 800;
+    z-index: 1;
+    
 
 }
+
+.information{
+    display: inline-block;
+    align-content: center;
+    padding-left: 5px;
+    animation: flashinfo 60s infinite linear;
+    padding: 5px;
+
+    
+}
+@keyframes flashinfo{
+    0%{
+        transform: translate3d(100%,0,0);
+    }
+
+    100%{
+        transform: translate3d(-100%,0,0);
+    }
+}
+
+.imagePrincipale{
+    position: relative;
+    overflow: hidden;
+}
+
 
 .titre{
+    position: absolute;
+    width: 100vw;
+    text-align: left;
     align-items: center;
+    top: 20%;
     color: white;
-    height: inherit;
-    align-content: center;
-    width: 70vw;
-    line-height: 2.5rem;
-    text-align: center;
-    font-family: 'poppins';
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px black;
+    padding: 10px;
+    padding-left: 400px;
 }
 
-
 .akparo{
-    font-family: 'poppins';
-    font-size: 2.5em;
+    font-size: 40px;
+    text-transform: uppercase;
 }
 
 .slogan{
-    font-size: 1.5em;
+    font-size: 18px;
 }
 
 .tiaha{
-    font-family: 'Querich';
-    font-size: 3em;
+
+    font-size: 50px;
     color: #C69C6C;
     filter: drop-shadow(0 0 2px #08243A);
+    
 }
+
+
+.chef{
+    position: absolute;
+    bottom: 0;
+
+    top: 10vh;
+}
+
+.chef img{
+    width: 70%;
+    position: relative;
+    bottom: 0;
+}
+
+.messageChef{
+    position: absolute;
+    color: white;
+    text-align: center;
+    top: 35vh;
+    width: 700px;
+    left: 435px;
+
+}
+
+.nom{
+    font-size: 40px ;
+}
+
+.titreChef{
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    background-color: #C69C6C;
+    border-radius: 25px;
+    color: white;
+    padding: 5px;
+    font-weight: 700;
+
+}
+
+.bienvenue{
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
 
 
 .apropos{
@@ -302,12 +318,14 @@ header{
     text-align: center;
     color: #888;
     font-size: 2em;
-    width: 100vw;
+
 }
 
 .apropos span {
     color: #356BB3;
 }
+
+
 
 .infovillage{
     display: grid;
@@ -331,6 +349,7 @@ header{
     border: 6px solid #356BB3;
     padding: 5px;
     margin: 10px 0;
+
 }
 
 .infovillage .info{
@@ -343,7 +362,18 @@ header{
     transform: scale(1.1);  
     box-shadow: 0 0 6px #888;
     border-radius: 5px;
+
     transition: all 0.5s ease-in-out;
+}
+
+
+.imageAccueil{
+    height: 75vh;
+    overflow: hidden;
+}
+
+.imageAccueil img{
+    width: 100vw;
 }
 
 .infoTiaha{
@@ -351,77 +381,8 @@ header{
     margin-top: 50px;
     text-align: center;
     padding: 20px;
-}
-
-.decouvrirTiaha{
-    background-color: #356BB3;
-    color: white;
-    padding: 30px;
-    border-radius: 15px;
-    width: 100vw;
-}
-.decouvrirTiaha h2{
-    padding: 10px 0;
-    color: black;
-}
-
-.vueTiaha{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    flex-wrap: nowrap;
 
 }
-
-.vueTiaha .containDecouvrir{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    text-align: justify;
-    line-height: 1.3em;
-    padding: 10px;
-    width: inherit;
-
-}
-
-.vueTiaha img{
-    width: 350px;
-    border-radius: 20px;
-    margin-left: 30px;
-    border: 10px solid white;
-}
-
-.vueTiaha img:hover{
-transform: scale(1.1);
-transition: all 1S ease-in;
-}
-
-.couleurDecouvrir:hover{
-    color: black;
-
-    background-color: white;
-    transition: all 1s ease-in ;
-}
-
-.couleurDecouvrir{
-    width: 220px;
- 
-    font-size: 17px;
-    border: 2px solid white;
-    font-weight: 600;
-    color: white;
-    text-align: center;
-    margin: 15px 0;
-    padding: 10px;
-    cursor: pointer;
-    box-shadow: 0 0 2px white;
-
-    border-radius: 25px;
-
-}
-
-
-
-
-
 
 .imageTiaha{
     display: grid;
@@ -458,21 +419,25 @@ transition: all 1S ease-in;
 }
 
 
-
-
-
-
-
-
 .plats{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 20px;
     text-align: center;
     background-color: #F2F8FC;
+    gap: 10px;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+}
+
+
+.plats img{
+    width: 200px;
+    border-radius: 25%;
+
+    border: 4px solid white;
+    background-color: white;
+
 }
 
 .mets {
@@ -483,23 +448,6 @@ transition: all 1S ease-in;
     margin: 10px;
     background-color: #ccc;
 }
-
-
-.imagePlat{
-    width: 300px;
-    height: 300px;
-}
-
-
-.imagePlat img{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 25%;
-    border: 4px solid white;
-    background-color: white;
-}
-
 
 .ingredient{
     text-align: justify;
@@ -530,12 +478,77 @@ transition: all 1S ease-in;
 
 
 
+.decouvrirTiaha{
+    background-color: #356BB3;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 0 10px;
+}
+.decouvrirTiaha h2{
+    padding: 10px 0;
+    color: black;
+}
+
+.vueTiaha{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.vueTiaha .containDecouvrir{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: justify;
+    line-height: 1.3em;
+    padding: 10px;
+}
+
+.vueTiaha img{
+    width: 350px;
+    border-radius: 20px;
+    margin-left: 30px;
+    border: 10px solid white;
+}
+
+.vueTiaha img:hover{
+transform: scale(1.1);
+transition: all 1S ease-in;
+}
+
+
+
+.couleurDecouvrir:hover{
+    color: black;
+
+    background-color: white;
+    transition: all 1s ease-in ;
+}
+
+
+.couleurDecouvrir{
+    width: 220px;
+ 
+    font-size: 17px;
+    border: 2px solid white;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 2px white;
+
+    border-radius: 25px;
+
+}
 
 .evenementielsCulturels{
     display: flex;
     justify-content: center;
     gap: 6px;
-    width: 100vw;
+
+    margin: 10px;
     background-color: #F2F8FC; ;
     padding: 30px;
 
@@ -582,11 +595,12 @@ transition: all 1S ease-in;
     border-radius: 20px;
     align-content: center;
     margin-bottom: 150px;
-    width: 100vw;
 }
 
 .carteTiaha img{
     width: 100%;
+    padding: 10px;
+
 
 
 }
@@ -602,7 +616,6 @@ transition: all 1S ease-in;
     line-height: 1.5rem;
 
     padding: 20px 50px 10px 50px;
-    width: 100vw;
 }
 
 .footer span{
