@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
     <title>Tiaha développement</title>
 </head>
 <body>
-    <header>
-        <nav id="barreMenu">
-            <div class="logo_tiaha">
-                <a href="index.html"><img src="images/logo_tiaha.jpeg" alt="logo Tiaha"></a>
-            </div>
+    <header id="barreMenu">
             <div class="menu">
                 <ul class="lienNavigation">
                     <li><a href="index.html">Accueil</a></li>
@@ -26,11 +23,11 @@
                             <li><a href="decouvertes/apprendre_adioukrou.html">J'apprends l'adioukrou</a></li>
                         </ul>
                     </li>
-                    <li class="sousMenu"><a href="">Evènements</a>
+                    <li class="sousMenu"><a href="evenements/cultures.html">Evènements culturels</a>
                         <ul class="menuDecouvertes">
-                            <li><a href="">Evènements cuturels</a></li>
-                            <li><a href="">Communiqué chefferie</a></li>
-                            <li><a href="">Agenda</a></li>
+                            <li><a href="evenements/cultures.html">Evènements cuturels</a></li>
+                            <li><a href="evenements/cultures.html">Communiqué chefferie</a></li>
+                            <li><a href="evenements/cultures.html">Agenda</a></li>
 
                         </ul>
                     
@@ -46,62 +43,22 @@
                     <li><a href="">Contact</a></li>
                 </ul>
             </div>
-            <div class="reseauSocio">
-                <a href=""><img src="icones/facebook.png" alt="" title="Compte facebook"></a>
-                <a href=""><img src="icones/whatsapp.png" alt="" title="Lien whatsapp"></a>
-                <a href=""><img src="icones/telegram.png" alt="" title="Lien télégram"></a>
-                <a href=""><img src="icones/email.png" alt="" title="Adresse mail"></a>
-            </div>
-            <div class="search">
-                <div class="iconeSearch">
-                    <img src="icones/search.png" alt="">
-                </div>
-                <form action="">
-                    <input type="text" placeholder="Rechercher">
-                </form>
-            </div>
-        </nav>
     </header>
-
-    
+    <div class="audio">
+        <audio controls src="music/son_adiman.mp3" autoplay muted></audio>
+    </div>
     <main class="container">
-        <div class="audio">
-            <audio src="music/son_adiman.mp3" controls preload="metadata" autoplay></audio>
-        </div>
-        <section class="flashInfo">
-            <div class="flashTitre">
-                <p>FLASH INFO</p>
-            </div>
-            <div class="information">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi blanditiis, natus quod eos voluptate saepe dolore illo quo.</p>
-            </div>
-        </section>
         <section class="imagePrincipale">
+            <img src="images/chef.png" alt="" >
             <div class="titre">
-                <p class="akparo">AKPARO! AKPAROO! à</p>
-                <h1 class="tiaha">TIAHA ADIMAN KASSAMBRE</h1>
-                <span class="slogan">SAÏ A EK' IBI DEFL A LEBUTU UWUMN ANY</span>
-            </div>
-            <div class="chef">
-
-                    <img src="images/chef.png" alt="" >
-
-                <div class="messageChef" >
-                    <h2 class="nom">DE LASME ENOCK</h2>
-                    <p class="titreChef">Chef du village de TIAHA</p>
-                    <p class="bienvenue">Vous souhaite la BIENVENUE !</p>
-                </div>
-            </div>
-           
-
-            <div class="imageAccueil">
-                <img src="images/verdure.jpg" alt="">
+                <p class="akparo animate__animated animate__backInDown">TIAHA DEVELOPPEMENT</p>
+                <h1 class="tiaha animate__animated animate__fadeInLeft">AKPARO A TIAHA ADIMAN KASSAMBRE</h1>
+                <span class="slogan animate__animated animate__rotateInUpLeft">SAÏ A EK' IBI DEFL A LEBUTU UWUMN ANY</span>
             </div>
 
         </section>
-        <h2 class="apropos">A propos de <span>TIAHA</span></h2>
+        <h2 class="apropos animate__animated animate__zoomInDown">A propos de <span>TIAHA</span></h2>
         <div class="infovillage" id="infoTiaha">
-
             <div class="commune info">
                 <img src="icones/distance.png" alt="">
                 <p><strong>Tiaha</strong> est situé à 14 km de Dabou (11km bitumé et 3 km non bitumé) 
@@ -118,7 +75,6 @@
         </div>
         <h2 class="apropos">Histoire <span>du village</span></h2>
         <section class="decouvrirTiaha">
-
             <div class="vueTiaha">
                 <div class="containDecouvrir">
                     <p>Situé à 14 kilomètres de la ville de Dabou sur la côtière (11 km bitumé et 3 km non bitumé), Tiaha est un village adioukrou qui est entouré par les villages tels que : 
@@ -152,6 +108,8 @@
                     <img src="images/tiaha3.jpg" alt="">
                     <p class="texte">Un aperçu à l'entrée du village</p>
                 </div>                
+            </div>
+            <div class="imageTiaha">   
                 <div class="imageTexte">
                     <img src="images/tiaha5.jpg" alt="">
                     <p class="texte">Un aperçu à l'entrée du village</p>
@@ -164,6 +122,8 @@
                     <img src="images/tiaha8.jpg" alt="">
                     <p class="texte">Un aperçu à l'entrée du village</p>
                 </div>
+            </div>
+            <div class="imageTiaha">
                 <div class="imageTexte">
                     <img src="images/tiaha8.jpg" alt="">
                     <p class="texte">Un aperçu à l'entrée du village</p>
@@ -192,16 +152,16 @@
                     </div>  
                 </div>
                 <div class="buto mets">
-                    <div class="imagePlat">
-                        <img src="images/popori.jpeg" alt="">
-                    </div>
                     <div class="ingredient">
                         <p class="nom">Buto</p>
                         <p class="mode">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam culpa nobis quisquam fuga quibusdam dolorem repellat dicta voluptas possimus! Repellendus voluptates beatae amet ipsa sit iusto consectetur iure eum rerum!
                             Dolorem, omnis aspernatur magnam amet ratione perferendis quaerat similique corrupti eum eos odio sunt a molestias ipsam beatae earum mollitia accusamus sequi tempore? Laboriosam quisquam quod accusamus, exercitationem tempora iusto.
                         </p>
-                    </div>  
+                    </div> 
+                    <div class="imagePlat">
+                        <img src="images/popori.jpeg" alt="">
+                    </div> 
                 </div>
                 <div class="attiekeHuile mets">
                     <div class="imagePlat">
@@ -216,16 +176,16 @@
                     </div>  
                 </div>
                 <div class="sou mets">
-                    <div class="imagePlat">
-                        <img src="images/mami_sou.jpeg" alt="">
-                    </div>
                     <div class="ingredient">
                         <p class="nom">Sou mérédi</p>
                         <p class="mode">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam culpa nobis quisquam fuga quibusdam dolorem repellat dicta voluptas possimus! Repellendus voluptates beatae amet ipsa sit iusto consectetur iure eum rerum!
                             Dolorem, omnis aspernatur magnam amet ratione perferendis quaerat similique corrupti eum eos odio sunt a molestias ipsam beatae earum mollitia accusamus sequi tempore? Laboriosam quisquam quod accusamus, exercitationem tempora iusto.
                         </p>
-                    </div>  
+                    </div> 
+                    <div class="imagePlat">
+                        <img src="images/mami_sou.jpeg" alt="">
+                    </div> 
                 </div>
                 <div class="attieke mets">
                     <div class="imagePlat">
@@ -240,9 +200,6 @@
                     </div>  
                 </div>
                 <div class="sauceClaire mets">
-                    <div class="imagePlat">
-                        <img src="images/sauce_claire.jpeg" alt="">
-                    </div>
                     <div class="ingredient">
                         <p class="nom">Sauce claire</p>
                         <p class="mode">
@@ -250,6 +207,9 @@
                             Dolorem, omnis aspernatur magnam amet ratione perferendis quaerat similique corrupti eum eos odio sunt a molestias ipsam beatae earum mollitia accusamus sequi tempore? Laboriosam quisquam quod accusamus, exercitationem tempora iusto.
                         </p>
                     </div>  
+                    <div class="imagePlat">
+                        <img src="images/sauce_claire.jpeg" alt="">
+                    </div>
                 </div>
             </div>
         </section>
@@ -260,23 +220,33 @@
 
             <div class="evenementielsCulturels">
                 <div class="fete">
-                    <img src="images/ebebu.jpg" alt="">
+                    <div class="imagefete">
+                        <img src="images/ebebu.jpg" alt="">
+                    </div>
                     <p class="texte">EBEB</p>
                 </div>
                 <div class="fete">
-                    <img src="images/angbandji1.jpeg" alt="">
+                    <div class="imagefete">
+                        <img src="images/angbandji1.jpeg" alt="">
+                    </div>
                     <p class="texte">ANGBANDJI</p>
                 </div>                
                 <div class="fete">
-                    <img src="images/Low.jpg" alt="">
+                    <div class="imagefete">
+                        <img src="images/Low.jpg" alt="">
+                    </div>
                     <p class="texte">LÔW</p>
                 </div>                
                 <div class="fete">
-                    <img src="images/mbedie2007.png" alt="">
+                    <div class="imagefete">
+                        <img src="images/mbedie2007.png" alt="">
+                    </div>
                     <p class="texte">DEDIAKP</p>
                 </div>                
                 <div class="fete">
-                    <img src="images/Génération.jpg" alt="">
+                    <div class="imagefete">
+                        <img src="images/Génération.jpg" alt="">
+                    </div>
                     <p class="texte">OKMEYE</p>
                 </div>                
             </div>
@@ -330,11 +300,7 @@
         <div class="copyright">
             copyright&copy2023 Tous droits reservés <a href="#">adouarsene</a>
         </div>
-    
     </footer>
-
-
-    
 </body>
 
 </html>
