@@ -29,6 +29,7 @@
 
 html, body{
     height: 100%;
+    overflow-x: hidden;
 }
 
 body{
@@ -390,7 +391,6 @@ h2 span {
 .vueTiaha{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
 }
 
 .containDecouvrir{
@@ -450,13 +450,75 @@ transition: all 1S ease-in;
 }
 
 
+@media screen and (max-width: 1240px) {
+    .vueTiaha{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+                "image"
+                "texte";
+        padding: 0;
+        margin: 0;
+    }
+
+    .imageDecouverte{
+        grid-area: image;
+    }
+
+    .vueTiaha .containDecouvrir{
+        grid-area: texte;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .containDecouvrir .texte_decouverte{
+        padding: 10px;
+        width: 100vw;
+        text-align: center;
+    }
+
+    .gastronime{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .gastronime.plats{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+
+    .mode{
+        display: none;
+    }
+    div.ingredient{
+        height: 100px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .ingredient p.nom{
+        height: auto;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    div.cuisson{
+        display: flex;
+        flex-direction: column;
+    }
+    
 
 
 
-
-
-
-
+    
+}
 
 
 
@@ -502,7 +564,6 @@ transition: all 1S ease-in;
 }
 
 .rive{
-
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -588,15 +649,18 @@ transition: all 1S ease-in;
     background-size: cover;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    height: auto;
 }
 
 .plats{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     padding: 20px;
     text-align: center;
     gap: 10px;
+    height: auto;
+    max-width: 1300px;
+    width: 100%;
 }
 
 .plats ul{
@@ -620,9 +684,15 @@ transition: all 1S ease-in;
     background-color: white;
     box-shadow: 0 0 4px var(--Noir);
     padding: 3px;
-
 }
 
+.cuisson{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    width: 100%;
+}
 
 .ingredient{
     display: flex;
