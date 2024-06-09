@@ -327,6 +327,9 @@ main{
     transition: all 1s ease-in-out;
 }
 
+#article_generation, #article_lignage{
+    scroll-margin-top: 150px;
+}
 
 
 
