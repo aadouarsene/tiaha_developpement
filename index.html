@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <title>Tiaha développement</title>
 </head>
 <body>
     <header>
         <div id="barreMenu">
+            <div class="logo">
+                <p>TIAHA <br> <span>Developpement</span></p>
+                <div class="menu_responsive">
+                    <a href="#"><i class='bx bx-menu'></i></a>
+                </div>
+            </div>
+
             <div class="menu">
                 <ul class="lienNavigation">
                     <li><a href="index.html">Accueil</a></li>
@@ -46,12 +54,14 @@
             </div>
         </div>
         <div class="audio">
-            <audio controls src="music/son_adiman.mp3" autoplay muted></audio>
+            <audio controls src="music/son_adiman.mp3" autoplay ></audio>
         </div>
             <div class="imagePrincipale">
-                <img src="images/chef.png" alt="" >
+                <div class="imageChef">
+                    <img src="images/chef.png" alt="" >
+                </div>
                 <div class="titre">
-                    <p class="akparo animate__animated animate__backInDown">TIAHA DEVELOPPEMENT</p>
+                    <p class="akparo animate__animated animate__backInDown">TIAHA <span> DEVELOPPEMENT</span></p>
                     <h1 class="tiaha animate__animated animate__fadeInLeft">AKPARO A TIAHA ADIMAN KASSAMBRE</h1>
                     <span class="slogan animate__animated animate__rotateInUpLeft">SAÏ A EK' IBI DEFL A LEBUTU UWUMN ANY</span>
                 </div>
@@ -59,37 +69,43 @@
     </header>
 
     <main>
+
+
+
         <div class="container">
-            <article class="description_village">
-                <div class="transition apropos">
-                    <h2>A propos de <span>TIAHA</span></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, reprehenderit explicabo laborum non accusamus officia 
-                    quod a rem expedita tempora.
-                    </p>
-                </div>
-                
+
+            <div class="titre_transition">
+                <h2>A propos de <span>TIAHA</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, reprehenderit explicabo laborum non accusamus officia 
+                quod a rem expedita tempora.
+                </p>
+            </div>
+
                 <div class="infovillage">
                     <div id="infoTiaha">
-                        <div class="commune info">
+                        <div class="info">
                             <img src="icones/distance.png" alt="">
-                            <p><strong>Tiaha</strong> est situé à 14 km de Dabou (11km bitumé et 3 km non bitumé) 
+                            <p>Tiaha est situé à 14 km de Dabou (11km bitumé et 3 km non bitumé) 
                                 commune Dabou. Dabou, étant la commune de Tiaha</p>
                         </div>
-                        <div class="habitants info">
+                        <div class="info">
                             <img src="icones/personnes.png" alt="">
-                            <p>Avec une superficie de 10 km<sup>2</sup>, Tiaha abrite environ 6 000 âmes. La population est copmposée des autochtones et des allogènes</p>
+                            <p>Avec une superficie de 10 km², Tiaha abrite environ 6 000 âmes. La population est copmposée des autochtones et des allogènes</p>
                         </div>
-                        <div class="sous-préfecture info">
+                        <div class="info">
                             <img src="icones/sp.png" alt="">
                             <p>Tiaha a pour Département et Sous-préfecture Dabou</p>
                         </div>
                     </div>
-                    
                 </div>
-            </article>
 
-            <article class="histoire_tiaha">
+            <div class="titre_transition">
                 <h2 class="apropos">Histoire <span>du village</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, reprehenderit explicabo laborum non accusamus officia 
+                    quod a rem expedita tempora.
+                </p>
+            </div>
+
                 <section class="decouvrirTiaha">
                     <div class="vueTiaha">
                         <div class="containDecouvrir">
@@ -110,13 +126,16 @@
                         <div class="imageDecouverte">
                             <img src="images/tiaha.jpg" alt="">
                         </div>
-        
                     </div>
                 </section>
-            </article>
-            
-            <article class="image_tiaha">
-                <h2 class="apropos">Tiaha <span>en image</span></h2>
+
+            <div class="titre_transition">
+                <h2>Tiaha <span>en image</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, reprehenderit explicabo laborum non accusamus officia 
+                    quod a rem expedita tempora.
+                </p>
+            </div>
+                
                 <section class="infoTiaha">
                     <div class="imageTiaha">
                         <div class="vue_tiaha">
@@ -145,37 +164,39 @@
                         </div>
                     </div>
                 </section>
-            </article>
-    
-            <article class="gastro_adioukrou">
+
+            <div class="titre_transition">
                 <h2 class="apropos">Gastronomie <span>Adioukrou</span></h2>
-        
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, reprehenderit explicabo laborum non accusamus officia 
+                    quod a rem expedita tempora.
+                </p>
+            </div>
+
                 <section class="gastronime">
-                    <div class="plats">
+                        <div class="imagePlat">
+                            <img src="images/foufou.jpg" alt="">
+                        </div>
 
-                            <div class="imagePlat imagefoufou">
-                                <img src="images/foufou.jpg" alt="">
-                            </div>
-
-                            <div class="imagePlat">
-                                <img src="images/mami_sou.jpeg" alt="">
-                            </div> 
+                        <div class="imagePlat">
+                            <img src="images/mami_sou.jpeg" alt="">
+                        </div> 
                     
-                            <div class="imagePlat">
-                                <img src="images/attieke.jpg" alt="">
-                            </div>
+                        <div class="imagePlat">
+                            <img src="images/attieke.jpg" alt="">
+                        </div>
 
-                            <div class="imagePlat">
-                                <img src="images/sauce_claire.jpeg" alt="">
-                            </div>
-
-                    </div>
+                        <div class="imagePlat">
+                            <img src="images/sauce_claire.jpeg" alt="">
+                        </div>
                 </section>
-            </article>
     
-            <article class="even_culturel">
+            <div class="titre_transition">
                 <h2 class="apropos">Evènements <span>culturels</span></h2>
-        
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, reprehenderit explicabo laborum non accusamus officia 
+                    quod a rem expedita tempora.
+                </p>
+            </div>
+
                 <section class="evenementiels">
                     <div class="evenementielsCulturels">
                         <div class="fete">
@@ -210,20 +231,22 @@
                         </div>         
                     </div>
                 </section>
-            </article>
     
-            <article class="carte_tiaha">
-                <h2 class="apropos">Localisation <span>de TIAHA</span></h2>
+
+                <div class="titre_transition">
+                    <h2 class="apropos">Localisation <span>de TIAHA</span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, reprehenderit explicabo laborum non accusamus officia 
+                        quod a rem expedita tempora.
+                    </p>
+                </div>
+
                 <div class="carteTiaha">
                     <img src="images/carteTiaha.png" alt="">
                 </div>
-            </article>
-        
-        
-
     </main>
+
+
     <footer id="footer" class="section footer">
-        <div class="footer-contain">
             <div class="footer-container">
                 <div class="footer-center">
                     <h3>RELIGIONS</h3>
@@ -258,7 +281,6 @@
                     <a href="#"> Adventiste</a>
                 </div>
             </div>
-        </div>
         <div class="copyright">
             copyright&copy2023 Tous droits reservés <a href="#">adouarsene</a>
         </div>

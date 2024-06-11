@@ -50,6 +50,7 @@ header{
     grid-area: header;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 main{
@@ -69,8 +70,24 @@ footer{
     background-color: var(--marron);
     box-shadow: 0 2px 4px var(--Noir);
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     z-index: 100;
+}
+
+.logo{
+    margin-right: 50px;
+    font-family: 'Titillium', 'helvetica', sans-serif;
+    font-size: 18px;
+    color: var(--blanche);
+    font-weight: 700;
+    letter-spacing: 7px;
+    cursor: pointer;
+}
+
+.logo span{
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: normal;
 }
 
 .menu{
@@ -79,8 +96,8 @@ footer{
 
 .lienNavigation{
     display: grid;
-    grid-template-columns: repeat(6, 150px);
-    gap: 5px;
+    grid-template-columns: repeat(6, 140px);
+    gap: 2px;
     list-style: none;
     height: 100%;
 }
@@ -91,12 +108,44 @@ footer{
     align-items: center;
     height: auto;
     border-radius: 5px;
+    position: relative;
 }
 
-.lienNavigation > li:hover{
-    border-bottom: 3px solid var(--orangeligth);
-    border-top: 3px solid var(--orangeligth);
+.lienNavigation > li::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--orangeligth);
+    border-radius: 5px;
+    /* border-top: 3px solid var(--orangeligth); */
+    transition: width 0.2s linear;
 }
+
+.lienNavigation > li::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--orangeligth);
+    border-radius: 5px;
+    /* border-top: 3px solid var(--orangeligth); */
+    transition: width 0.2s linear;
+}
+
+.lienNavigation > li:hover::before{
+    /* border-bottom: 3px solid var(--orangeligth); */
+    width: 100%;
+}
+.lienNavigation > li:hover::after{
+    /* border-bottom: 3px solid var(--orangeligth); */
+    width: 100%;
+}
+
 
 .lienNavigation > li > a{
     width: 100%;
@@ -158,6 +207,251 @@ footer{
     color: black;
 }
 
+
+.menu_responsive{
+    font-size: 16px;
+    display: none;
+}
+
+.menu_responsive a{
+    text-decoration: none;
+    color: var(--blanche);
+}
+
+
+@media screen and (max-width: 1000px) {
+    .lienNavigation{
+        grid-template-columns: repeat(6, 100px);
+        text-align: center;
+    }
+
+    p.akparo {
+        font-size: 40px;
+    }
+
+    #infoTiaha{
+        width: 100%;
+        height: 100%;
+    }
+
+    .infovillage #infoTiaha div.info{
+        margin: 25px 10px;  
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 780px) {
+
+
+    .lienNavigation{
+        display: none;
+    }
+
+    p.akparo {
+        display: flex;
+        font-size: 30px;
+    }
+
+    h1.tiaha{
+        font-size: 18px;
+    }
+
+    span.slogan{
+        font-size: 13px;
+        width: 300px;
+    }
+
+    #barreMenu .menu_responsive{
+        display: block;
+        font-size: 30px;
+        color: white;
+    }
+
+    #barreMenu .logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0 30px;
+        padding: 5px;
+    }
+
+    header > div.imagePrincipale{
+        height: 400px;
+    }
+
+    div.imageDecouverte img{
+        width: 200px;
+        height: 300px;
+        border-radius: 5px;
+    }
+}
+
+
+@media screen and (max-width: 580px) {
+    p.akparo {
+        font-size: 23px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+
+    h1.tiaha{
+        font-size: 15px;
+    }
+
+    span.slogan{
+        font-size: 10px;
+        width: 250px;
+    }
+
+    div.imageDecouverte img{
+        width: 200px;
+        height: 200px;
+        border-radius: 5px;
+    }
+
+    div.vueTiaha{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.containDecouvrir{
+        text-align: center;
+        align-items: center;
+    }
+
+    div.titre_transition h2{
+        font-size: 1.6rem;
+    }
+
+    div.titre_transition p{
+        font-size: 13px;
+    }
+
+    div.imagePlat{
+        width: 300px;
+        height: 300px;
+    }
+
+    footer{
+        align-items: center;
+    }
+
+    div.footer-container{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    div.imageChef img{
+        position: absolute;
+        max-width: 400px;
+        width: 100%;
+        top: 35px;
+    }
+
+    div.imageChef{
+        position: relative;
+    }
+
+
+
+    div.imageTiaha{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 200px);
+        gap: 10px;
+        height: 100%;
+        max-width: 1300px;
+        width: 90%;
+        flex-shrink: 0;
+    }
+    
+    div.vue_tiaha{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        overflow: hidden;
+        border: 2px solid white;
+    }
+
+    div.vue_lagune{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        overflow: hidden;
+        border: 2px solid white;
+    }
+    
+    div.rive{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        overflow: hidden;
+        border: 2px solid white;
+    }
+    
+    .rive img{
+        height: 100%;
+    }
+    
+    div.plantation2{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        overflow: hidden;
+        border: 2px solid white;
+    }
+    
+
+    
+    div.apercu{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        overflow: hidden;
+        border: 2px solid white;
+    }
+    div.nouveau_quartier{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        overflow: hidden;
+        border: 2px solid white;
+    }
+
+    div.imagefete{
+        overflow: hidden;
+        width: 300px;
+        height: 300px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
 /* ------ Fichie audio ------ */
 
 .audio audio{
@@ -170,23 +464,56 @@ footer{
 /* ------ Image d'accueil ------ */
 
 .imagePrincipale{
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.3)), url('images/verdure.jpg');
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.3)), url('images/verdure.jpg');
     height: 600px;
     width: 100%;
-    background-attachment: fixed;
     background-repeat: no-repeat ;
     background-size: cover;
+    background-position: center;
     text-align: center;
     position: relative;
     overflow: hidden;
+    animation: slide 45s infinite;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes slide {
+    25%{
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.3)), url('images/ebebu.jpg');
+        background-position: top;
+        background-repeat: no-repeat ;
+        background-size: cover;
+    }
+    50%{
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.3)), url('images/ebebu2.jpg');
+        background-repeat: no-repeat ;
+        background-position: center;
+        background-size: cover;
+    }
+    75%{
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.3)), url('images/ebebu1.jpg');
+        background-position: top;
+        background-repeat: no-repeat ;
+        background-size: cover;
+    }
+    100%{
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.5) 100%, rgba(255, 255, 255, 0.3)), url('images/verdure.jpg');
+        background-repeat: no-repeat ;
+        background-position: center;
+        background-size: cover;
+    }
+
 }
 
 .imagePrincipale img{
     position: absolute;
     right: 20px;
+    
 }
 
 .titre{
+    display: flex;
+    flex-flow: column wrap;
     text-align: left;
     position: absolute;
     align-items: center;
@@ -201,6 +528,9 @@ footer{
 
 
 .akparo{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     font-size: 50px;
     font-family: 'Microgramma';
     color: var(--blanche);
@@ -236,7 +566,8 @@ main{
     align-items: center;
     justify-content: center;
     background-color: var(--blanche);
-    width: 90%;
+    max-width: 1300px;
+    width: 100%;
     margin: auto;
 }
 
@@ -244,52 +575,35 @@ main{
     display: flex;
     gap: 30px;
     flex-direction: column;
-    /* display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: 
-            "apropos"
-            "histoireVillage"
-            "imageTiaha"
-            "gastronomie"
-            "evenementsCulturels"
-            "carte"; */
-}
-
-.description_village{
-    /* grid-area: apropos; */
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    margin: 50px 0;
-
+    align-items: center;
 }
 
 
-.transition{
+.titre_transition{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    margin: auto;
-    text-align: center;
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
     gap: 20px;
 }
 
-.transition p{
+.titre_transition p{
     font-style: italic;
+    width: 50%;
+    text-align: center;
 }
 
-
-h2{
+.titre_transition h2{
     color: var(--orangeligth);
     font-size: 2.5rem;
     align-content: center;
     font-weight: bold;
 }
 
-h2 span {
+.titre_transition h2 span {
     color: var(--marron);
 }
 
@@ -299,18 +613,22 @@ h2 span {
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    font-weight: 400;
-    background-image: url('images/texture.png');
-    background-size: cover;
+    font-weight: 500;
     color: black;
     margin: auto;
+    width: 100%;
 }
 
 .infovillage{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('images/texture.png');
+    background-size: cover;
+    max-width: 1300px ;
     width: 100%;
+    min-height: 350px;
+    height: auto;
 }
 
 .infovillage img{
@@ -323,7 +641,14 @@ h2 span {
     position: absolute;
     top: -50px;
     background-color: var(--blanche);
-    box-shadow: 0 3px 4px var(--Noir);
+    box-shadow: 0 3px 1px 4px var(--blanche);
+}
+
+.info p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5em;
 }
 
 .infovillage .info{
@@ -331,71 +656,51 @@ h2 span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 10px;
+    row-gap: 5px;
     margin: 5px 30px;  
     padding: 10px;
-    line-height: 1.5em;
     background-color: var(--blanche);
     width: 250px;
     height: 200px;
-    border-radius: 30px;
+    border-radius: 5px;
     position: relative;
     box-shadow: 0 0 3px var(--Noir);
+    transition: background-color 0.5s ease-out;
 }
 
 .infovillage .info:hover{
-    transform: scale(1.1);  
-    box-shadow: 0 0 6px #888;
-    border-radius: 5px;
-    transition: all 0.5s ease-in-out;
-}
-
-.infoTiaha{
-    display: flex;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7) 100%, rgba(0, 0, 0, 0.6) ), url("images/tiaha.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--marron);
+    color: var(--blanche);
 }
 
 
-.histoire_tiaha{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    margin: 50px 0;
-}
+
+
+
+
+
 
 .decouvrirTiaha{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, rgba(28, 27, 27, 0.9) 100%, rgba(0, 0, 0, 0.6) ), url("images/tiaha4.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: var(--marron);
     color: var(--blanche);
     padding: 20px;
     width: 100%;
     height: auto;
-    font-size: 16px;
+    border-radius: 20px;
 }
 
 
 .vueTiaha{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
 }
 
 .containDecouvrir{
-    grid-column-start: 1;
-    grid-column-end: 3;
+    font-size: 14px;
+    line-height: 25px;
+    font-family: 'montserrat';
 }
 
 .vueTiaha .containDecouvrir{
@@ -450,110 +755,45 @@ transition: all 1S ease-in;
 }
 
 
-@media screen and (max-width: 1240px) {
-    .vueTiaha{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: 
-                "image"
-                "texte";
-        padding: 0;
-        margin: 0;
-    }
-
-    .imageDecouverte{
-        grid-area: image;
-    }
-
-    .vueTiaha .containDecouvrir{
-        grid-area: texte;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .containDecouvrir .texte_decouverte{
-        padding: 10px;
-        width: 100vw;
-        text-align: center;
-    }
-
-    .gastronime{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-
-    .gastronime.plats{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 100vw;
-    }
-
-    .mode{
-        display: none;
-    }
-    div.ingredient{
-        height: 100px;
-        border-radius: 5px;
-        padding: 5px;
-    }
-
-    .ingredient p.nom{
-        height: auto;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    div.cuisson{
-        display: flex;
-        flex-direction: column;
-    }
-    
 
 
-
-    
-}
-
-
-
-
-
-
-
-
-.image_tiaha{
+.infoTiaha{
     display: flex;
-    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     justify-content: center;
     align-items: center;
-    gap: 60px;
-    margin: 50px 0;
+    width: 100%;
 }
 
 .imageTiaha{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
     gap: 10px;
     height: 100%;
-    width: 1000px;
-    margin: 50px 0;
-
-    
+    max-width: 1300px;
+    width: 90%;
+    flex-shrink: 0;
 }
 
 .imageTiaha img{
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
     border-radius: 5px;
+    transition: transform 1.5s ease;
+    filter: grayscale(0.3);
+    cursor: pointer;
 }
+
+.imageTiaha img:hover{
+   transform: scale(1.1);
+   filter: brightness(1);
+}
+
+
 
 
 .vue_tiaha{
@@ -561,6 +801,8 @@ transition: all 1S ease-in;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    overflow: hidden;
+    border: 2px solid white;
 }
 
 .rive{
@@ -568,6 +810,8 @@ transition: all 1S ease-in;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 4;
+    overflow: hidden;
+    border: 2px solid white;
 }
 
 .rive img{
@@ -579,18 +823,24 @@ transition: all 1S ease-in;
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
+    overflow: hidden;
+    border: 2px solid white;
 }
 
 .vue_lagune{
-    /* grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3; */
+    overflow: hidden;
+    border: 2px solid white;
 }
 
-.apercu
-.nouveau_quartier
-.plantation
+.apercu{
+    overflow: hidden;
+    border: 2px solid white;
+}
+.nouveau_quartier{
+    overflow: hidden;
+    border: 2px solid white;
+}
+
 
 
 
@@ -632,100 +882,55 @@ transition: all 1S ease-in;
 
 
 .gastro_adioukrou{
-    display: flex;
+    /* display: flex;
+    flex-wrap: wrap ;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 60px;
+    align-items: center; */
+    /* gap: 60px;
     margin: 50px 0;
+    max-width: 1300px; */
+    background: linear-gradient(to right, rgba(28, 27, 27, 0.9) 100%, rgba(0, 0, 0, 0.6)), url("images/foufou.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
 .gastronime{
     display: flex;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7) 100%, rgba(0, 0, 0, 0.6) ), url("images/foufou.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: white;
     justify-content: center;
     align-items: center;
-    height: auto;
+    max-width: 1300px;
+    width: 80%;
+
 }
 
-.plats{
+
+.imagePlat{
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
-    text-align: center;
-    gap: 10px;
-    height: auto;
-    max-width: 1300px;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 230px;
 }
 
-.plats ul{
-    list-style: none;
-    margin-bottom: 5px;
-
-}
-
-.plats ul li::before{
-    content: "> ";
-    font-weight: bold;
-}
-
-
-.plats img{
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
+.imagePlat > img{
+    /* border-radius: 10px;
     object-fit: cover;
     border: 4px solid var(--roux);
     background-color: white;
     box-shadow: 0 0 4px var(--Noir);
     padding: 3px;
-}
-
-.cuisson{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 300px;
     width: 100%;
-}
-
-.ingredient{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 20px;
-    line-height: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 5px var(--Noir);
-    color: black;
-    font-size: 16px;
-    width: 300px;
-    height: auto;
-    font-family: 'nunito', sans-serif;
-    background-color: var(--blanche);
-}
-
-.ingredient .nom{
-    font-weight: 900;
-    font-size: 20px;
-
-    border-radius: 10px;
-    color: var(--Noir);
-    margin: auto;
-    text-transform: uppercase;
-    color: var(--marron);
-}
-
-.imagePlat{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    height: 100%; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .imagePlat img:hover{
@@ -733,29 +938,10 @@ transition: all 1S ease-in;
     transition: all 1s ease-in-out;
 }
 
-.preparation{
-    font-weight: bolder;
-    text-decoration: underline;
-}
-
-.preparation + p{
-    text-align: left;
-}
 
 
 
-
-
-
-
-.even_culturel{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    margin: 50px 0;
-}
+/* Evenements culturels */
 
 .evenementiels{
     background: linear-gradient(to right, rgba(28, 27, 27, 0.6) 100%, rgba(0, 0, 0, 0.6) ), url("images/ebebu2.jpg");
@@ -766,18 +952,20 @@ transition: all 1S ease-in;
 
 .evenementielsCulturels{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 6px;
     padding: 30px;
     width: 100%;
+    min-height: 100px;
+    height: 100%;
 }
 
 
 .evenementielsCulturels img{
-    width: 230px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    overflow: hidden;
 }
 
 .fete{
@@ -789,6 +977,8 @@ transition: all 1S ease-in;
 
 .imagefete{
     overflow: hidden;
+    width: 220px;
+    height: 200px;
 }
 
 .evenementielsCulturels img:hover{
@@ -817,35 +1007,28 @@ transition: all 1S ease-in;
 
 
 
-.carte_tiaha{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    margin: 50px 0;
-}
-
-
-
 
 
 .carteTiaha{
-    text-align: center;
-
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+
+    padding: 0 25px;
 }
 
 .carteTiaha img{
+    display: flex;
+    height: 100%;
     width: 100%;
-    height: 400px;
-    padding: 20px;
+    padding: 5px;
     object-fit: cover;
-    border-radius: 40px;
-
-
-
+    border-radius: 10px;
 }
 
 
@@ -858,7 +1041,9 @@ transition: all 1S ease-in;
     /* background-color: var(--Noir); */
     line-height: 1.5rem;
     padding: 20px 50px 10px 50px;
-    background-color: var(--roux);
+    background-color: var(--marron);
+    display: flex;
+    flex-direction: column;
 }
 
 .footer span{
@@ -866,8 +1051,8 @@ transition: all 1S ease-in;
 }
 
 .footer-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: space-around;
     color: var(--blanche);
 }
 
