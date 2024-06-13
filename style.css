@@ -335,9 +335,15 @@ footer{
     }
 
     div.imagePlat{
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
     }
+
+    div.imagePlat img {
+        padding: 10px;
+    }
+
+
 
     footer{
         align-items: center;
@@ -452,12 +458,17 @@ footer{
 
 
 
-/* ------ Fichie audio ------ */
+/* ------ Fichier audio ------ */
+
+.audio {
+    max-width: 1300px;
+    width: 90%;
+    height: 20px;
+}
 
 .audio audio{
-    width: 1300px;
-    height: 20px;
-    background-color: var(--blanche);
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -732,12 +743,7 @@ transform: scale(1.05);
 transition: all 1S ease-in;
 }
 
-.couleurDecouvrir:hover{
-    color: var(--roux);
-    background-color: white;
-    transition: background-color 0.5s ease-in ;
-    font-weight: bold;
-}
+
 
 .couleurDecouvrir{
     width: 220px;
@@ -752,6 +758,35 @@ transition: all 1S ease-in;
     background-color: var(--marron);
     border-radius: 25px;
     border: 2px solid var(--blanche);
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+
+.couleurDecouvrir:hover p{
+    opacity: 0;
+}
+
+
+.couleurDecouvrir::after {
+    content: "DECOUVRIR TIAHA";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    background-color: white;
+    height: 100%;
+    border-radius: inherit;
+    transition: 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    color: var(--marron);
+}
+
+.couleurDecouvrir:hover::after {
+    width: 100%;
+    opacity: 1;
 }
 
 
@@ -872,7 +907,7 @@ transition: all 1S ease-in;
 
 .gastronime{
     display: flex;
-    gap: 10px;
+    gap: 5px;
     flex-wrap: wrap;
     background-color: white;
     justify-content: center;
@@ -957,7 +992,7 @@ transition: all 1S ease-in;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 6px;
+    gap: 3px;
     padding: 30px;
     width: 100%;
     min-height: 100px;
@@ -969,11 +1004,12 @@ transition: all 1S ease-in;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 50% 10%;
 }
 
 .fete{
     box-shadow: 0 0 3px var(--Noir);
-    margin: 0 5px;
+    margin: 0 2px;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -1023,6 +1059,7 @@ transition: all 1S ease-in;
     height: 100%;
 
     padding: 0 25px;
+    margin-bottom: 20px;
 }
 
 .carteTiaha img{
